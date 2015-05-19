@@ -46,6 +46,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\201505120810280_InitialCreate.cs" />
+    <Compile Include="Migrations\201505120810280_InitialCreate.Designer.cs">
+      <DependentUpon>201505120810280_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201505191201454_Image2.cs" />
+    <Compile Include="Migrations\201505191201454_Image2.Designer.cs">
+      <DependentUpon>201505191201454_Image2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Project.cs" />
     <Compile Include="PortfolioDBContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -53,6 +62,14 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201505120810280_InitialCreate.resx">
+      <DependentUpon>201505120810280_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505191201454_Image2.resx">
+      <DependentUpon>201505191201454_Image2.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

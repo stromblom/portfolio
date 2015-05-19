@@ -17,5 +17,6 @@ namespace Stromblom.Portfolio.Database
         }
 
         public DbSet<Project> Projects { get; set; }
+
     }
 }

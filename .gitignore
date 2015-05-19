@@ -109,8 +109,8 @@ Backup*/
 UpgradeLog*.XML
 
 # SQL Server files
-Stromblom.Portfolio/App_Data/*.mdf
-Stromblom.Portfolio/App_Data/*.ldf
+App_Data/*.mdf
+App_Data/*.ldf
 
 #LightSwitch generated files
 GeneratedArtifacts/

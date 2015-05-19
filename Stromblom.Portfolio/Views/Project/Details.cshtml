@@ -1,0 +1,12 @@
+﻿@model Stromblom.Portfolio.Database.Models.Project
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>@Model.Title</h2>
+<span>@Model.About</span>
+@if (!String.IsNullOrEmpty(Model.Image))
+{
+    <img src="@Model.Image" />
+}
+

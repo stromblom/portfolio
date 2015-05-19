@@ -1,0 +1,10 @@
+﻿@model List<Stromblom.Portfolio.Database.Models.Project>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Projects</h2>
+@foreach (var project in Model)
+{
+    @Html.ActionLink(project.Title, "Details", new { id = project.ID }, new { @class = "ulrik"}) <br />
+}

@@ -1,0 +1,25 @@
+﻿@model Stromblom.Portfolio.Database.Models.Project
+@{
+    ViewBag.Title = "Create";
+    var edit = ViewBag.Edit ?? false;
+}
+
+<h2>@(edit ? "Edit project" : "Create new project")</h2>
+@if (!String.IsNullOrEmpty(ViewBag.Message))
+{
+    <span>@ViewBag.Message</span>
+}
+
+@using (Html.BeginForm(edit ? "Edit" : "Create", "Project", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{ 
+    @Html.HiddenFor(x => x.ID)
+    @Html.LabelFor(x => x.Title)
+    @Html.TextBoxFor(x => x.Title)
+    <br />
+    @Html.LabelFor(x => x.About)
+    @Html.TextAreaFor(x => x.About)
+    <br />
+    <input type="file" name="imageFile" />
+    <button type="submit">@(edit ? "Update!" : "Add!")</button>
+    
+}
